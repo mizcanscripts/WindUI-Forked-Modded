@@ -6,7 +6,6 @@ on:
     
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: false
     
 jobs:
   build:
@@ -19,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
