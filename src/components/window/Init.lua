@@ -1,3 +1,13 @@
+--[[
+   WindUI Forked Modified v1.0.1 
+   By @mizcanscripts
+
+   Modified Date: Aug 31, 2026 1:04PM
+   Latest Modified Date: Aug 31, 2026 1:20PM
+
+   What's New?:[+] Added New LogoCard For Tabs
+]]
+
 -- /* src/components/Window/Init.lua */
 
 local cloneref = (cloneref or clonereference or function(instance)
@@ -99,6 +109,12 @@ return function(Config)
 		PendingFlags = {},
 
 		IsToggleDragging = false,
+
+      BrandLogo = Config.BrandLogo,
+		BrandTitle = Config.BrandTitle,
+		BrandSubtitle = Config.BrandSubtitle,
+		BrandPanelEnabled = Config.BrandPanelEnabled ~= false,
+
 	}
 
 	Window.UICorner = Window.Radius
@@ -247,14 +263,78 @@ return function(Config)
 		--TabHighlight
 	})
 
+   	local BrandPanelOffset = 0
+	if Window.BrandPanelEnabled and (Window.BrandLogo or Window.BrandTitle or Window.BrandSubtitle) then
+		BrandPanelOffset = 115
+		local BrandPanel = New("Frame", {
+			Name = "LogoCard",
+			Size = UDim2.new(0, Window.SideBarWidth - 20, 0, 100),
+			Position = UDim2.new(0, 10, 0, Window.Topbar.Height + 10),
+			BackgroundColor3 = Color3.fromHex("#1e1e2e"),
+			ThemeTag = { BackgroundColor3 = "Secondary" },
+			ZIndex = 5,
+		}, {
+			New("UICorner", { CornerRadius = UDim.new(0, 8) }),
+			New("UIStroke", {
+				Color = Color3.fromHex("#2a2a4a"),
+				ThemeTag = { Color = "Stroke" },
+				Thickness = 1,
+				Transparency = 0.5,
+			}),
+		})
+		if Window.BrandLogo then
+			New("ImageLabel", {
+				Name = "BrandLogoImage",
+				Size = UDim2.new(0.85, 0, Window.BrandTitle and 0.50 or 0.85),
+				Position = UDim2.new(0.075, 0, 0.05, 0),
+				BackgroundTransparency = 1,
+				Image = Window.BrandLogo,
+				ScaleType = Enum.ScaleType.Fit,
+				Parent = BrandPanel,
+			})
+		end
+		if Window.BrandTitle then
+			local titleY = Window.BrandLogo and 0.60 or 0.10
+			New("TextLabel", {
+				Name = "BrandTitle",
+				Size = UDim2.new(1, 0, 0.22, 0),
+				Position = UDim2.new(0, 0, titleY, 0),
+				BackgroundTransparency = 1,
+				Text = Window.BrandTitle,
+				ThemeTag = { TextColor3 = "Text" },
+				Font = Enum.Font.GothamBold,
+				TextSize = 15,
+				TextXAlignment = Enum.TextXAlignment.Center,
+				AutoLocalize = false,
+				Parent = BrandPanel,
+			})
+		end
+		if Window.BrandSubtitle then
+			local subY = Window.BrandLogo and 0.85 or (Window.BrandTitle and 0.40 or 0.10)
+			New("TextLabel", {
+				Name = "BrandSubtitle",
+				Size = UDim2.new(1, 0, 0.12, 0),
+				Position = UDim2.new(0, 0, subY, 0),
+				BackgroundTransparency = 1,
+				Text = Window.BrandSubtitle,
+				ThemeTag = { TextColor3 = "TextDisabled" },
+				Font = Enum.Font.Gotham,
+				TextSize = 10,
+				TextXAlignment = Enum.TextXAlignment.Center,
+				AutoLocalize = false,
+				Parent = BrandPanel,
+			})
+		end
+	end
+
 	Window.UIElements.SideBarContainer = New("Frame", {
 		Size = UDim2.new(
 			0,
 			Window.SideBarWidth,
 			1,
-			Window.User.Enabled and -Window.Topbar.Height - 42 - (Window.UIPadding * 2) or -Window.Topbar.Height
+			Window.User.Enabled and -Window.Topbar.Height - 42 - (Window.UIPadding * 2) - BrandPanelOffset or -Window.Topbar.Height - BrandPanelOffset
 		),
-		Position = UDim2.new(0, 0, 0, Window.Topbar.Height),
+		Position = UDim2.new(0, 0, 0, Window.Topbar.Height + BrandPanelOffset),
 		BackgroundTransparency = 1,
 		Visible = true,
 	}, {
@@ -455,7 +535,7 @@ return function(Config)
 			Tween(
 				Window.UIElements.SideBarContainer,
 				0.25,
-				{ Size = UDim2.new(0, Window.SideBarWidth, 1, -Window.Topbar.Height - 42 - (Window.UIPadding * 2)) },
+				{ Size = UDim2.new(0, Window.SideBarWidth, 1, -Window.Topbar.Height - 42 - (Window.UIPadding * 2) - BrandPanelOffset) },
 				Enum.EasingStyle.Quint,
 				Enum.EasingDirection.Out
 			):Play()
@@ -466,7 +546,7 @@ return function(Config)
 			Tween(
 				Window.UIElements.SideBarContainer,
 				0.25,
-				{ Size = UDim2.new(0, Window.SideBarWidth, 1, -Window.Topbar.Height) },
+				{ Size = UDim2.new(0, Window.SideBarWidth, 1, -Window.Topbar.Height - BrandPanelOffset) },
 				Enum.EasingStyle.Quint,
 				Enum.EasingDirection.Out
 			):Play()
