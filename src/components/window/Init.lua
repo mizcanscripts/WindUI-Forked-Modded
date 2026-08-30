@@ -1,11 +1,13 @@
 --[[
+
    WindUI Forked Modified v1.0.1 
    By @mizcanscripts
 
    Modified Date: Aug 31, 2026 1:04PM
-   Latest Modified Date: Aug 31, 2026 1:20PM
+   Latest Modified Date: Aug 31, 2026 1:34PM
 
    What's New?:[+] Added New LogoCard For Tabs
+
 ]]
 
 -- /* src/components/Window/Init.lua */
@@ -37,6 +39,7 @@ local ConfigManager = require("../../config/Init")
 local Notified = false
 
 return function(Config)
+   local BrandPanelOffset = 0
 	local Window = {
 		Title = Config.Title or "UI Library",
 		Author = Config.Author,
@@ -325,6 +328,7 @@ return function(Config)
 				Parent = BrandPanel,
 			})
 		end
+      BrandPanel.Parent = Window.UIElements.SideBarContainer.Parent
 	end
 
 	Window.UIElements.SideBarContainer = New("Frame", {
