@@ -27,7 +27,7 @@ jobs:
         uses: leafo/gh-actions-lua@v11
         with:
           luaVersion: "5.1"
-          cache: false
+          buildCache: false
 
       - name: Setup Aftman
         uses: ok-nick/setup-aftman@v0.3.0
