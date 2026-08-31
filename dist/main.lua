@@ -6,11 +6,14 @@
    |__/|__/_/_/ /_/\__,_/\____/___/  /_/    \____/_/  /_/|_|\___/\__,_/  /_/  /_/\____/\__,_/\__,_/\___/\__,_/   
                                                                                                               
                                                                                                               
-    v1.6.66  |  2026-08-31 3:10PM |  Roblox UI Library for scripts
+    v1.6.66 |  Roblox UI Library for scripts
     
     To view the source code, see the `src/` folder on the official GitHub repository.
-    
-    Author: Footagesus (Footages, .ftgs, oftgs)
+
+    Date Of Creation: 2026-08-31 3:10PM
+    Date Of Latest Modification: 2026-08-31 6:23PM
+
+    Original Author: Footagesus (Footages, .ftgs, oftgs)
     Modded Author: Mizumaru (miz, mizumaruu, Mizu)
 
     Github:  https://github.com/Footagesus/WindUI
