@@ -13,8 +13,8 @@
     Author: Footagesus (Footages, .ftgs, oftgs)
     Modded Author: Mizumaru (miz, mizumaruu, Mizu)
 
-    Github: https://github.com/Footagesus/WindUI
-            https://github.com/mizcanscripts/WindUI-Forked-Modded
+    Github:  https://github.com/Footagesus/WindUI
+             https://github.com/mizcanscripts/WindUI-Forked-Modded
     Discord: https://discord.gg/ftgs-development-hub-1300692552005189632
              https://dsc.gg/MZXHUB
     License: MIT
