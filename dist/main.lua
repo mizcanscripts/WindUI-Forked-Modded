@@ -6,7 +6,7 @@
    |__/|__/_/_/ /_/\__,_/\____/___/  /_/    \____/_/  /_/|_|\___/\__,_/  /_/  /_/\____/\__,_/\__,_/\___/\__,_/   
                                                                                                               
                                                                                                               
-    v1.6.66  |  2026-08-31 3:10PM |  Roblox UI Library for scripts
+    v1.6.66  |  2026-08-31 6:00PM |  Roblox UI Library for scripts
     
     To view the source code, see the `src/` folder on the official GitHub repository.
     
