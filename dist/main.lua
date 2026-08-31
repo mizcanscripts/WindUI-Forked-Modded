@@ -1,16 +1,22 @@
 --[[
-     _      ___         ____  ______
-    | | /| / (_)__  ___/ / / / /  _/
-    | |/ |/ / / _ \/ _  / /_/ // /  
-    |__/|__/_/_//_/\_,_/\____/___/
-    
+    _       ___           ____  ______   ______           __            __   __  ___          __    __         __
+   | |     / (_)___  ____/ / / / /  _/  / ____/___  _____/ /_____  ____/ /  /  |/  /___  ____/ /___/ /__  ____/ /
+   | | /| / / / __ \/ __  / / / // /   / /_  / __ \/ ___/ //_/ _ \/ __  /  / /|_/ / __ \/ __  / __  / _ \/ __  / 
+   | |/ |/ / / / / / /_/ / /_/ // /   / __/ / /_/ / /  / ,< /  __/ /_/ /  / /  / / /_/ / /_/ / /_/ /  __/ /_/ /  
+   |__/|__/_/_/ /_/\__,_/\____/___/  /_/    \____/_/  /_/|_|\___/\__,_/  /_/  /_/\____/\__,_/\__,_/\___/\__,_/   
+                                                                                                              
+                                                                                                              
     v1.6.66  |  2026-07-29  |  Roblox UI Library for scripts
     
     To view the source code, see the `src/` folder on the official GitHub repository.
     
     Author: Footagesus (Footages, .ftgs, oftgs)
+    Modded Author: Mizumaru (miz, mizumaruu, Mizu)
+
     Github: https://github.com/Footagesus/WindUI
+            https://github.com/mizcanscripts/WindUI-Forked-Modded
     Discord: https://discord.gg/ftgs-development-hub-1300692552005189632
+             https://dsc.gg/MZXHUB
     License: MIT
 ]]
 
