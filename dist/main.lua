@@ -22,7 +22,7 @@
      • [+] Can Now Use Theme To Chnage Notify Button Color
      v1.0.5:
      • [-] Optimized Gradient Function
-     • [+] Added Button Type On Notify (Default: Button, Optional: Underline)
+     • [+] Added Button Type On Notify (Default: Button, Optional: Underline | Requested By: @.sxmple_)
     
     Author: Footagesus (Footages, .ftgs, oftgs)
     Modded Author: Mizumaru (miz, mizumaruu, Mizu)
